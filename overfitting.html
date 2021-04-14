@@ -1,0 +1,290 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="portfolio,resume,maitri">
+    <meta name="author" content="Maitri Patel">
+	
+    <title><Maitri Patel></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
+      <a target="_blank"class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none"></span>
+        
+      </a>
+      
+    </nav>
+
+     <!--  <div class="fixed-top" style="height: 3rem;background-color: #3366cc !important;margin-left:30%;margin-right: 30%;box-shadow:solid black 1px 1px 5px 5px">...</div>
+ -->
+
+    <div class="container-fluid p-0">
+
+
+       <!-- <section class="resume-section p-3 p-lg-5 d-flex d-column" style="padding-bottom: 0% !important" id="about"> -->
+        <div class="my-auto">
+          <h1 class="mb-0" h1 style="color:steelblue" >OVERFITTING
+            <span class="text-primary"></span>
+          </h1>
+          <div class="subheading mb-5"> Higher order Linear Regression 
+
+            <p class="lead mb-5">In this blog I will explain the concept of Overfitting using polynomial Regression, how to detect it and different ways to prevent it.</p>
+          </div>
+          <div>
+            <h3 class="mb-0">Overview of Overfitting: </h3>
+          </div>
+
+
+          
+            <p class="lead mb-5">When a model fits more data than it needs, it starts catching noisy data and inaccurate values in the data. As a result, the efficiency and the accuracy of the model decrease.</p>
+            <center><img src="img/o1.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+
+            <p class="lead mb-5">When we run the training algorithm on the data set, we allow the cost to reduce with each number of iteration so running this algorithm for too long will result in reduced cost but it will also fit the noisy data from the data set.</p>
+
+             <p class="lead mb-5">The result will look like the graph below </p>
+
+              <center><img src="img/o2.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <p class="lead mb-5">It looks efficient but it’s not the main goal of the algorithm such as linear regression is to find a dominant trend and fit the data points accordingly but in this case, the line fits all the data points which is irrelevant to the efficiency of the model in predicting optimum outcomes for the new entry data points. </p>
+
+
+          <p class="lead mb-5">When we run the training algorithm on the data set, we allow the cost to reduce with each number of iteration so running this algorithm for too long will result in reduced cost but it will also fit the noisy data from the data set. </p>
+
+        
+        </div>
+       
+      <!-- </section> -->
+
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Underfitting</h3>
+            </div>
+          </div>
+      
+      <section>
+      	 <div>
+          <p class="lead mb-5">To avoid overfitting, we could stop the training at an initial stage. But it might also lead to the model not being able to learn enough from training data, which may find it difficult to capture the dominant trend. This is known as <b>UNDERFITTING</b>. </p>
+          <p class="lead mb-5">Underfitting is when you have a high bias with the new data </p>
+          <p class="lead mb-5">The graph below displays underfitting </p>
+          <center><img src="img/o3.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+          <p class="lead mb-5">The result is the same as overfitting like it will cause inefficiency in predicting the outcomes, but it will take fewer data to recognize the dominant trend inside the data set. </p>
+        </div>
+      </section>
+
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">HOW TO DETECT OVERFITTING?</h3>
+
+               <p class="lead mb-5">During the training, we will have the training error and the validation error, i.e, the error on the training set and error on the validation set, we have to observe how these errors are developing </p>
+
+               <p class="lead mb-5">For example, The graph below contains a Blue line for the training error and a red line for the Validation error </p>
+               
+               <center><img src="img/o4.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+                <p class="lead mb-5">Initially, both are decreasing gradually which means both are getting lower and lower error rates, but after a while, the Validation error is going up while the training error is continuing to show the downward trend.</p>
+
+                <p class="lead mb-5">The model here is learning what the taring set looks like and it’s adapting itself to the training set all the time hence the reason the training error is showing the continuous downward trend whereas the validation error is increasing because it’s not caring about the validations had as much right it’s only caring about adapting itself to our training set here. </p>
+
+                <p class="lead mb-5">If you have a similar graph with training and validation errors then you’re probably suffering from overfitting</p>
+
+                <p class="lead mb-5">The main challenge with overfitting is to estimate the accuracy of the performance of our model with new data as we would not be able to estimate the accuracy until we test it.</p>
+
+            </div>
+
+          </div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">HOW TO AVOID OVERFITTING?</h3>
+          
+
+            <div>
+              
+
+         There are several ways in which we can avoid overfitting, that are:
+            <ul>
+              <li> Cross-Validation</li>
+              <li> Training with more data</li>
+              <li>  Regularization</li>
+              <li>  Removing Features</li>
+              <li>  Ensembling</li>
+              <li>  Early Stopping</li>
+            </ul>
+</div>
+          </div>
+          </div>
+  <section>
+         <div>
+          <h3 class="mb-0">Lets' start the implementation</h3>
+
+          <p class="lead mb-5"> Overfitting with Higher order Linear Regression</p>
+
+        </div>
+      </section>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Import the Libraries</h3>
+              <center><img src="img/o5.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Generate 20 random values</h3>
+              <center><img src="img/o6.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Splitting the data into two equal parts: train and test both having 10 pairs</h3>
+              <center><img src="img/o7.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Reshape the data(Reshaping is used to make an array column-wise)</h3>
+              <center><img src="img/o8.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <center><img src="img/o9.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <center><img src="img/o10.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Importing more dependencies</h3>
+              <center><img src="img/o11.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Using root mean square error, find weights of polynomial regression for order is 0, 1, 3, 9</h3>
+              <center><img src="img/o12.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Displaying weights in table</h3>
+              <center><img src="img/o13.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Draw a chart of fit data</h3>
+
+				<p>sorted X and Y data simultaneously to get proper line graph ouput</p>
+              <center><img src="img/o14.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">The graph will look like below: </h3>
+              <center><img src="img/o15.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <center><img src="img/o16.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <center><img src="img/o17.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <center><img src="img/o18.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <center><img src="img/o19.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+               <h3 class="mb-0">Calculate the Train error v/s Test error </h3>
+              <center><img src="img/o20.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <p> Calculating the training and Testing error, we get: </p>
+              <center><img src="img/o21.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Now generate 100 more data and fit 9th order model and draw fit </h3>
+              <center><img src="img/o22.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+              <p> Generating the 9th order using the same previous method:
+              <center><img src="img/o23.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+               <h3 class="mb-0">Selected 25 data and fit 9th order model and draw fit </h3>
+              <center><img src="img/o24.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Now we will regularize using the sum of weights </h3>
+               <p> Using Regularization method, we can prevent overfitting </p>
+              <center><img src="img/o25.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> The Lambda graphs: </p>
+                <p> When Lambda = 1 : </p>
+              <center><img src="img/o26.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> When Lambda = 1/10 :  </p>
+              <center><img src="img/o27.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> When Lambda = 1/100 :  </p>
+              <center><img src="img/o28.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> When Lambda = 1/1000 :  </p>
+              <center><img src="img/o29.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> When Lambda = 1/10000 :  </p>
+              <center><img src="img/o30.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+               <p> When Lambda = 1/100000 : </p>
+              <center><img src="img/o31.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <p> <b>The Training and Test error of the Lambda Values are: </b></p>
+              <center><img src="img/o32.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+              <h3 class="mb-0">Now according to the Lambda values, draw the Training and Test Values </h3>
+              <center><img src="img/o33.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+
+
+
+
+            </div>
+          </div>
+
+<section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Challenges and contributions: </h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5">There are large datasets as some of the independent data are correlated with other data. First I tried using LASSO which uses L1 regularization( does the feature selection automatically) but the result was not accurate as LASSO cannot be used as it can only be used if we have correlated variables and it turns one variable to zero and retains only one variable. This was resulting in low accuracy for the model and loss of Information.</p>
+
+<p class="lead mb-5">So, I used Ridge Regression as it reduces model complexity and it shrinks the parameters. 
+It shrinks the parameters which result in reducing the variance
+For the optimization function to be penalized, lambda regularizes the coefficients in a way that they(coefficients) take huge values. This was the more optimal method and we can prevent Overfitting using Ridge Regression.</p>
+          
+        </div>
+      </section>
+
+
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">References:</h3>
+            </div>
+
+          </div>
+          <div>
+              
+
+          
+            <ul>
+              <li><a href="https://laptrinhx.com/what-is-overfitting-in-machine-learning-and-how-to-avoid-it-1333335641/">https://laptrinhx.com/what-is-overfitting-in-machine-learning-and-how-to-avoid-it-1333335641/</a></li>
+              <li><a href="https://www.datasciencecentral.com/profiles/blogs/deep-dive-into-polynomial-regression-and-overfitting">https://www.datasciencecentral.com/profiles/blogs/deep-dive-into-polynomial-regression-and-overfitting</a></li>
+              <li><a href="https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2">https://towardsdatascience.com/linear-regression-using-python-b136c91bf0a2</a></li>
+              <li><a href="https://towardsdatascience.com/polynomial-regression-bbe8b9d97491">https://towardsdatascience.com/polynomial-regression-bbe8b9d97491</a></li>
+              <li><a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html">https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html</a></li>
+              <li><a href="https://statisticsbyjim.com/regression/overfitting-regression-models/">https://statisticsbyjim.com/regression/overfitting-regression-models/</a></li>
+              <li><a href="https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/">https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/</a></li>
+              <li><a href="https://www.datacamp.com/community/tutorials/towards-preventing-overfitting-regularization">https://www.datacamp.com/community/tutorials/towards-preventing-overfitting-regularization</a></li>
+               <li><a href="https://elitedatascience.com/overfitting-in-machine-learning">https://elitedatascience.com/overfitting-in-machine-learning</a></li>
+              <li><a href="https://blogs.sas.com/content/subconsciousmusings/2017/07/06/how-to-use-regularization-to-prevent-model-overfitting/">https://blogs.sas.com/content/subconsciousmusings/2017/07/06/how-to-use-regularization-to-prevent-model-overfitting/</a></li>
+              <li><a href="https://www.analyticsvidhya.com/blog/2015/02/avoid-over-fitting-regularization/">https://www.analyticsvidhya.com/blog/2015/02/avoid-over-fitting-regularization/</a></li>
+              <li><a href="https://analyticsindiamag.com/types-of-regularization-techniques-to-avoid-overfitting-in-learning-models/">https://analyticsindiamag.com/types-of-regularization-techniques-to-avoid-overfitting-in-learning-models/
+</a></li>
+
+              
+
+
+            </ul>
+
+          </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
+</html>
