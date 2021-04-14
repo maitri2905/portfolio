@@ -1,0 +1,289 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="portfolio,resume,maitri">
+    <meta name="author" content="Maitri Patel">
+	
+    <title><Maitri Patel></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
+      <a target="_blank"class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none"></span>
+        
+      </a>
+      
+    </nav>
+
+     <!--  <div class="fixed-top" style="height: 3rem;background-color: #3366cc !important;margin-left:30%;margin-right: 30%;box-shadow:solid black 1px 1px 5px 5px">...</div>
+ -->
+
+    <div class="container-fluid p-0">
+
+
+       <!-- <section class="resume-section p-3 p-lg-5 d-flex d-column" style="padding-bottom: 0% !important" id="about"> -->
+        <div class="my-auto">
+          <h1 class="mb-0">CIFAR10
+            <span class="text-primary">TRAINING A CLASSIFIER</span>
+          </h1>
+          <div class="subheading mb-5"> AN IMAGE CLASSIFIER USING PYTORCH 
+          </div>
+          <div>
+            <h3 class="mb-0">Overview of pytorch</h3>
+          </div>
+          
+            <p class="lead mb-5">PyTorch is gaining popularity in the Deep Learning community and is widely being used by deep learning practitioners, PyTorch is a Python-based library that provides Tensor computations. Furthermore, tensors are multidimensional arrays just like NumPy’s ndarrays which can run on GPU as well.</p>
+
+          <p class="lead mb-5"></p>PyTorch provides functionalities such as:</p>
+          <ul>
+            <li>TorchScript for creating serializable and optimizable models</li>
+            <li>Distributed training to parallelize computations</li>
+            <li>Dynamic Computation graphs which enable to make the computation graphs on the go, and many more</li>
+          </ul>
+
+          <p class="lead mb-5">PyTorch provides a framework for us to build computational graphs as we go, and even change them during runtime. Particularly, this is valuable for situations where we don’t know how much memory for creating a neural network. You can work on all sorts of deep learning challenges using PyTorch. </p>
+
+          
+          The following are some of the challenges:
+            <ul>
+              <li>Images (Detection, Classification, etc.)</li>
+              <li>Text (classification, generation, etc.)</li>
+              <li>Reinforcement Learning</li>
+            </ul>
+
+        
+        </div>
+       
+      <!-- </section> -->
+
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">The CIFAR-10 dataset</h3>
+            </div>
+          </div>
+      
+      <section>
+      	 <div>
+          <p class="lead mb-5">The CIFAR-10 dataset consists of 60000 32×32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. </p>
+          <p class="lead mb-5">The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. </p>
+          <p class="lead mb-5">Here are the classes in the dataset, as well as 10 random images from each: </p>
+          <center><img src="img/c1.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+          
+        </div>
+      </section>
+
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Training an image classifier</h3>
+            </div>
+
+          </div>
+          <div>
+              
+
+          The following are some steps to follow:
+            <ul>
+              <li>Load and normalizing the CIFAR10 training and test datasets using torchvision</li>
+              <li>Define a Convolutional Neural Network</li>
+              <li>Define a loss function</li>
+              <li>Train the network on the training data</li>
+              <li>Test the network on the test data</li>
+            </ul>
+
+          </div>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Define CNN model</h3>
+            </div>
+          </div>
+  <section>
+         <div>
+          <p class="lead mb-5"> The Conv2d layer transforms a 3-channel image to a 16-channel feature map, and the MaxPool2d layer halves the height and width. The feature map gets smaller as we add more layers, until we are finally left with a small feature map, which can be flattened into a vector. We can then add some fully connected layers at the end to get vector of size 10 for each image. </p>
+          
+          <center><img src="img/c2.png" class="img-fluid" alt="Responsive image" style="padding-bottom: 50px;" width = "600" height = "600"></center>
+          
+        </div>
+      </section>
+
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Setup Training system</h3>
+            </div>
+          </div>
+
+<section>
+         <div>
+        <p class="lead mb-5">After preparing dataset and defining network model, the next step is to setup the training system. To be more specific, we need to define Loss function, Optimizer and some other Hyper-parameters that support the training procedure.</p>
+        </div>
+      </section>
+
+<section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Loss function</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5">Loss function is the component of the training system quantifying the badness of the model. The choice of Loss function depends heavily on the the problem type. For numerical values, the most common cost functions is Square Error. For classification task, Cross-Entropy is commonly preferred. In this dataset, there are 10 classes, the proper loss function is clearly the Cross-Entropy loss. Softmax operation is also applied to map the result to range [0, 1] as related to probability.</p>
+          
+        </div>
+      </section>
+
+
+<section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Optimizer</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5">After calculating the current loss of training’s specific state, a mechanism is needed to search and update the parameters for minimizing the loss value. As widely known, the most popular optimization algorithm for Neural Networks is Gradient Descent. Briefly, at a state, for each parameter, the optimizer will determined how to change its value to reach the lowest minima for the  cost function.</p>
+          <center><img src="img/c3.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+      <section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Training the network</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5"></p>
+          <center><img src="img/c4.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+<section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">The accuracy of the two layer model</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5"></p>
+          <center><img src="img/c5.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+<section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Layer 3</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5"></p>
+          <center><img src="img/c6.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+      <section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">Layer 4</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5"></p>
+          <center><img src="img/c7.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+      <section>
+  <div class="resume-item d-flex flex-column flex-md-row mb-5">
+<div class="resume-content mr-auto">
+               <h3 class="mb-0">The graph</h3>
+            </div>
+          </div>
+          </section>
+
+<section>
+         <div>
+          <p class="lead mb-5"></p>
+          <center><img src="img/c8.png" class="img-fluid" alt="Responsive image"></center>
+        </div>
+      </section>
+
+    </div>
+
+
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">References:</h3>
+            </div>
+
+          </div>
+          <div>
+              
+
+          
+            <ul>
+              <li><a href="https://pytorch.org/docs/stable/tensors.html">https://pytorch.org/docs/stable/tensors.html</a></li>
+              <li><a href="https://blog.fpt-software.com/cifar10-94-of-accuracy-by-50-epochs-with-end-to-end-training">https://blog.fpt-software.com/cifar10-94-of-accuracy-by-50-epochs-with-end-to-end-training</a></li>
+              <li><a href="https://www.stefanfiott.com/machine-learning/cifar-10-classifier-using-cnn-in-pytorch/">https://www.stefanfiott.com/machine-learning/cifar-10-classifier-using-cnn-in-pytorch/</a></li>
+              <li><a href="https://medium.com/swlh/image-classification-with-cnn-4f2a501faadb">https://medium.com/swlh/image-classification-with-cnn-4f2a501faadb</a></li>
+              <li><a href="https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1">https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1</a></li>
+              <li><a href="https://towardsdatascience.com/how-to-train-an-image-classifier-in-pytorch-and-use-it-to-perform-basic-inference-on-single-images-99465a1e9bf5">https://towardsdatascience.com/how-to-train-an-image-classifier-in-pytorch-and-use-it-to-perform-basic-inference-on-single-images-99465a1e9bf5</a></li>
+              <li><a href="https://medium.datadriveninvestor.com/cnns-the-key-to-computer-vision-29c6fe1c6fdc">https://medium.datadriveninvestor.com/cnns-the-key-to-computer-vision-29c6fe1c6fdc</a></li>
+              <li><a href="https://medium.datadriveninvestor.com/making-an-image-classifier-using-cnns-and-pytorch-17518905c85b">https://medium.datadriveninvestor.com/making-an-image-classifier-using-cnns-and-pytorch-17518905c85b</a></li>
+              
+
+
+            </ul>
+
+          </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
+</html>
