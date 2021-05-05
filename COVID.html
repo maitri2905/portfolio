@@ -406,11 +406,15 @@ I'll focus on analyzing the second wave in some countries along with the extent 
 
 <section>
          <div>
-          <p class="lead mb-5">There are large datasets as some of the independent data are correlated with other data. First I tried using LASSO which uses L1 regularization( does the feature selection automatically) but the result was not accurate as LASSO cannot be used as it can only be used if we have correlated variables and it turns one variable to zero and retains only one variable. This was resulting in low accuracy for the model and loss of Information.</p>
+          <p class="lead mb-5">There are large datasets as some of the independent data are correlated with other data. I have collect datasets from different sources in order to get accurate prediction
+I had used Autoregressive Integrated Moving Average (ARIMA) for forecasting, but the result was not as accurate
+</p>
 
-<p class="lead mb-5">So, I used Ridge Regression as it reduces model complexity and it shrinks the parameters. 
-It shrinks the parameters which result in reducing the variance
-For the optimization function to be penalized, lambda regularizes the coefficients in a way that they(coefficients) take huge values. This was the more optimal method and we can prevent Overfitting using Ridge Regression.</p>
+<p class="lead mb-5">In the Refrences I have used word different techniques for prediction
+I have used Prophet for Forecasting the time series data based on an additive model where non-linear trends are fit with yearly, weekely, and daily seasonality.
+I have Predicted the Data of Daily Cases, Total Vaccination and People Fully Vaccinated.
+Using this, will be able to predict the Vaccination Drive.
+</p>
           
         </div>
       </section>
